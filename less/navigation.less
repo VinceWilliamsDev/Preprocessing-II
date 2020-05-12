@@ -1,7 +1,7 @@
 // Navigation Styles here
 .navigation-bar {
     border-bottom: 2px dashed @navigation-border;
-    width: 100vw;
+    width: 100%;
     padding: 1% 0;
 
     nav {
@@ -10,9 +10,20 @@
         justify-content: space-between;
         align-items: center;
 
-        h1, a {
-            color: @font-color;
+        @media @mobile {
+            flex-direction: column;
         }
+
+        .nav-buttons {
+            width: 40%;
+            display: flex;
+            justify-content: space-around;
+
+            @media @mobile {
+                width: 100%;
+            }
+        }
+
     }
 
 }

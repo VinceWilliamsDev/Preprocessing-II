@@ -165,9 +165,8 @@ img {
 }
 a {
   font-size: 1.6rem;
-  padding: 0 15px;
+  color: #212529;
   text-decoration: none;
-  color: black;
 }
 button {
   font-size: 2rem;
@@ -177,9 +176,15 @@ button {
   width: 100%;
   margin: 0 auto;
 }
+@media (max-width: 500px) {
+  .container {
+    max-width: 100%;
+    width: 90%;
+  }
+}
 .navigation-bar {
   border-bottom: 2px dashed #C0C0C0;
-  width: 100vw;
+  width: 100%;
   padding: 1% 0;
 }
 .navigation-bar nav {
@@ -188,9 +193,20 @@ button {
   justify-content: space-between;
   align-items: center;
 }
-.navigation-bar nav h1,
-.navigation-bar nav a {
-  color: #212529;
+@media (max-width: 500px) {
+  .navigation-bar nav {
+    flex-direction: column;
+  }
+}
+.navigation-bar nav .nav-buttons {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+}
+@media (max-width: 500px) {
+  .navigation-bar nav .nav-buttons {
+    width: 100%;
+  }
 }
 .footer {
   width: 100%;
@@ -203,6 +219,14 @@ button {
   font-size: 1.6rem;
   padding: 20px;
 }
+@media (max-width: 500px) {
+  .footer p {
+    padding: 20px 0;
+  }
+}
+.home header h2 {
+  margin-top: 30px;
+}
 .home .content-section {
   margin: 30px 0;
   display: flex;
@@ -213,9 +237,19 @@ button {
   width: 48%;
   padding-right: 1%;
 }
+@media (max-width: 500px) {
+  .home .content-section .text-content {
+    width: 100%;
+  }
+}
 .home .content-section .img-content {
   width: 48%;
   padding-left: 1%;
+}
+@media (max-width: 500px) {
+  .home .content-section .img-content {
+    width: 100%;
+  }
 }
 .home .content-section .img-content img {
   border-radius: 10px;
@@ -228,13 +262,28 @@ button {
   padding-left: 1%;
   padding-right: 0;
 }
+@media (max-width: 500px) {
+  .home .inverse-content .text-content {
+    order: -1;
+  }
+}
 .home .inverse-content .img-content {
   padding-right: 1%;
   padding-left: 0;
 }
+@media (max-width: 500px) {
+  .home .inverse-content {
+    display: flex;
+  }
+}
 .home .content-destination {
   width: 75%;
   margin: 0 auto 30px;
+}
+@media (max-width: 500px) {
+  .home .content-destination {
+    width: 100%;
+  }
 }
 .home .content-destination img {
   border-radius: 10px;
@@ -245,9 +294,20 @@ button {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .home .content-pick {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .home .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
+}
+@media (max-width: 500px) {
+  .home .content-pick .destination {
+    width: 80%;
+  }
 }
 .home .content-pick .destination .btn {
   width: 100%;

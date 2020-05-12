@@ -41,9 +41,8 @@ img {
 
 a {
   font-size: 1.6rem;
-  padding: 0 15px;
+  color: @font-color;
   text-decoration: none;
-  color: black;
 }
 
 button {
@@ -54,4 +53,9 @@ button {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
+
+  @media @mobile {
+    max-width: 100%;
+    width: 90%;
+    }
 }
